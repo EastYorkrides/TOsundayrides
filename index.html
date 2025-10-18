@@ -1,72 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>East York Dawn Patrol — Sunday 6:30am</title>
-  <meta name="description" content="Free Sunday sunrise road rides from East York. Meet 6:30am sharp at Mortimer Ave & Lismore Crescent. ~80km. Group A ~27 km/h, Group B ~25 km/h. Helmets & lights required." />
-
-  <!-- Open Graph / Twitter SEO -->
-  <meta property="og:title" content="East York Dawn Patrol — Sunday 6:30am" />
-  <meta property="og:description" content="Free Sunday sunrise road rides from East York. ~80km. A: 27 km/h • B: 25 km/h. Meet 6:30am sharp at Mortimer & Lismore." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1600&auto=format&fit=crop" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Favicon (inline SVG) -->
-  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%230a0a0a"/><circle cx="50" cy="70" r="22" fill="%23ffd166"/><path d="M18 60h64" stroke="%23ffd166" stroke-width="6" stroke-linecap="round"/><path d="M22 58 40 38 70 42 78 58" fill="none" stroke="%23fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>' />
-
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>East York Sarmades Rides — Sunday 6:30 am</title>
+  <meta name="description" content="Free Sunday sunrise road rides from East York. Meet 6:30 am sharp at Mortimer Ave & Lismore Crescent. ~80km. Group A ~27 km/h, Group B ~25 km/h. Helmets & lights required."/>
+  <meta property="og:title" content="East York Sarmades Rides — Sunday 6:30 am"/>
+  <meta property="og:description" content="Free Sunday sunrise road rides from East York. ~80 km. A: 27 km/h • B: 25 km/h. Meet 6:30 am sharp at Mortimer & Lismore."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="BACKGROUND_IMAGE_URL"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   <style>
-    :root{ --bg:#0a0a0a; --fg:#fafafa; --muted:#bdbdbd; --accent:#ffd166; --accent2:#06d6a0; --card:#121212; }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
+    :root { --bg:#0a0a0a; --fg:#fafafa; --muted:#bdbdbd; --accent:#ffd166; --card:#121212; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--fg);
+           font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
+           line-height:1.6; }
+    a { color:inherit; text-decoration:none; }
+    img { max-width:100%; display:block; }
 
     /* Header */
-    .nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,10,.72);backdrop-filter:blur(10px);border-bottom:1px solid #1e1e1e}
-    .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1100px;margin:0 auto}
-    .brand{font-weight:800;letter-spacing:.4px}
-    .brand span{color:var(--accent)}
-    .menu{display:flex;gap:18px;font-weight:600}
-    .menu a{opacity:.85}
-    .menu a:hover,.menu a:focus{opacity:1}
+    .nav { position:fixed; top:0; left:0; right:0; z-index:50;
+           background:rgba(10,10,10,.72); backdrop-filter:blur(10px);
+           border-bottom:1px solid #1e1e1e; }
+    .nav .wrap { display:flex; align-items:center; justify-content:space-between;
+                  padding:14px 20px; max-width:1100px; margin:0 auto; }
+    .brand { font-weight:800; letter-spacing:.4px; }
+    .brand span { color:var(--accent); }
+    .menu { display:flex; gap:18px; font-weight:600; }
+    .menu a { opacity:.85; }
+    .menu a:hover, .menu a:focus { opacity:1; }
 
     /* Hero */
-    .hero{position:relative;min-height:92vh;display:grid;place-items:end;background:#000}
-    .hero::before{content:"";position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1446226844365-56f184f4bff4?q=80&w=2200&auto=format&fit=crop');background-position:center;background-size:cover;opacity:.82;filter:grayscale(.1) saturate(1.2)}
-    .hero .shade{position:absolute;inset:0;background:linear-gradient(to top, rgba(10,10,10,.88), rgba(10,10,10,.35))}
-    .hero .content{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:24px 20px 64px}
-    .kicker{display:inline-block;background:rgba(255,255,255,.12);padding:6px 10px;border-radius:999px;font-size:.9rem;margin-bottom:12px}
-    h1{font-size:clamp(2rem,6vw,4rem);line-height:1.1;margin:0 0 12px}
-    .sub{font-size:clamp(1rem,2.4vw,1.25rem);color:var(--muted);max-width:65ch}
-    .cta{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;font-weight:800}
-    .btn.primary{background:var(--accent);color:#111}
-    .btn.ghost{border:1px solid #2a2a2a;background:#121212}
+    .hero { position:relative; min-height:92vh; display:grid; place-items:end; background:#000; }
+    .hero::before { content:""; position:absolute; inset:0;
+                    background-image:url('BACKGROUND_IMAGE_URL');
+                    background-position:center; background-size:cover;
+                    opacity:.82; filter:grayscale(.1) saturate(1.2); }
+    .hero .shade { position:absolute; inset:0;
+                   background:linear-gradient(to top, rgba(10,10,10,.88), rgba(10,10,10,.35)); }
+    .hero .content { position:relative; z-index:1; max-width:1100px; margin:0 auto;
+                     padding:24px 20px 64px; }
+    .kicker { display:inline-block; background:rgba(255,255,255,.12);
+              padding:6px 10px; border-radius:999px; font-size:.9rem; margin-bottom:12px; }
+    h1 { font-size:clamp(2rem,6vw,4rem); line-height:1.1; margin:0 0 12px; }
+    .sub { font-size:clamp(1rem,2.4vw,1.25rem); color:var(--muted); max-width:65ch; }
+    .cta { margin-top:24px; display:flex; flex-wrap:wrap; gap:12px; }
+    .btn { display:inline-flex; align-items:center; gap:10px; padding:12px 16px;
+           border-radius:12px; font-weight:800; }
+    .btn.primary { background:var(--accent); color:#111; }
+    .btn.ghost { border:1px solid #2a2a2a; background:#121212; }
 
     /* Sections */
-    section{padding:72px 20px}
-    .wrap{max-width:1100px;margin:0 auto}
-    .grid{display:grid;gap:22px}
-    @media(min-width:900px){.grid.two{grid-template-columns:1.2fr 1fr}}
-    h2{font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 6px}
-    .eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.15em;font-weight:800;font-size:.8rem}
-    .card{background:var(--card);border:1px solid #1f1f1f;border-radius:18px;padding:20px}
-    .list{display:grid;gap:10px}
-    .list li{list-style:none;background:#0e0e0e;border:1px solid #202020;padding:12px 14px;border-radius:12px}
-    .pill{display:inline-block;border:1px solid #2a2a2a;border-radius:999px;padding:6px 10px;margin-right:8px;background:#111}
-
-    /* Gallery */
-    .gallery{display:grid;gap:10px;grid-template-columns:repeat(6,1fr)}
-    .gallery img{height:180px;width:100%;object-fit:cover;border-radius:14px}
-    @media(max-width:800px){.gallery{grid-template-columns:repeat(3,1fr)}}
+    section { padding:72px 20px; }
+    .wrap { max-width:1100px; margin:0 auto; }
+    .grid { display:grid; gap:22px; }
+    @media(min-width:900px) { .grid.two { grid-template-columns:1.2fr 1fr; } }
+    h2 { font-size:clamp(1.6rem,3vw,2.2rem); margin:0 0 6px; }
+    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.15em;
+              font-weight:800; font-size:.8rem; }
+    .card { background:var(--card); border:1px solid #1f1f1f; border-radius:18px;
+            padding:20px; }
+    .list { display:grid; gap:10px; }
+    .list li { list-style:none; background:#0e0e0e; border:1px solid #202020;
+               padding:12px 14px; border-radius:12px; }
+    .pill { display:inline-block; border:1px solid #2a2a2a;
+            border-radius:999px; padding:6px 10px; margin-right:8px;
+            background:#111; }
 
     /* Footer */
-    footer{padding:36px 20px;border-top:1px solid #1f1f1f;color:var(--muted)}
-
-    .small{font-size:.9rem;color:var(--muted)}
+    footer { padding:36px 20px; border-top:1px solid #1f1f1f; color:var(--muted); }
+    .small { font-size:.9rem; color:var(--muted); }
   </style>
 </head>
 <body>
@@ -90,8 +95,8 @@
       <div class="shade" aria-hidden="true"></div>
       <div class="content">
         <div class="kicker">Every Sunday · East York · Free</div>
-        <h1>Sunrise road rides. 6:30am sharp.</h1>
-        <p class="sub">We roll at 6:30am from Mortimer Ave &amp; Lismore Crescent. ~80 km at steady group pace. Group A ~27 km/h. Group B ~25 km/h. Helmets &amp; lights required. Be kind. Be smooth.</p>
+        <h1>Sunrise road rides. 6:30 am sharp.</h1>
+        <p class="sub">We roll at 6:30 am from Mortimer Ave &amp; Lismore Crescent. ~80 km at steady group pace. Group A ~27 km/h. Group B ~25 km/h. Helmets &amp; lights required. Be kind. Be smooth.</p>
         <div class="cta">
           <a class="btn primary" href="#meet">Join next Sunday</a>
           <a class="btn ghost" href="#safety">Read the ride rules</a>
@@ -105,7 +110,7 @@
         <div>
           <div class="eyebrow">What is this?</div>
           <h2>Local, community-led rides at dawn.</h2>
-          <p>Inspired by sunrise ride crews around the world, <strong>East York Dawn Patrol</strong> is a weekly, no‑cost road ride. We keep it simple: meet on time, ride predictably, and share the sunrise. We usually aim for a flat-to-rolling 80 km loop and coffee at the finish.</p>
+          <p>Inspired by sunrise ride crews around the world, <strong>East York Dawn Patrol</strong> is a weekly, no-cost road ride. We keep it simple: meet on time, ride predictably, and share the sunrise. We usually aim for a flat-to-rolling ~80 km loop and coffee at the finish.</p>
           <p class="small">Open to experienced road cyclists who are comfortable in a rotating paceline. This is not a coached or insured event; you ride at your own risk.</p>
         </div>
         <div class="card" aria-label="Ride facts">
@@ -115,9 +120,8 @@
             <li><strong>Distance:</strong> ~80 km</li>
             <li><strong>Cost:</strong> Free</li>
             <li><strong>Groups:</strong> A ≈ 27 km/h · B ≈ 25 km/h</li>
-            <li><strong>Requirements:</strong> Helmet, front &amp; rear lights, drop‑bar road bike, basics to fix a flat, respect the road &amp; each other</li>
+            <li><strong>Requirements:</strong> Helmet, front &amp; rear lights, drop-bar road bike, basics to fix a flat, respect the road &amp; each other</li>
           </ul>
-          <p style="margin-top:10px"><a class="btn ghost" href="calendar.ics" download>+ Add recurring 6:30am ride to your calendar</a></p>
         </div>
       </div>
     </section>
@@ -148,12 +152,12 @@
         <div>
           <div class="eyebrow">Route &amp; Distance</div>
           <h2>~80 km sunrise loops</h2>
-          <p>Routes vary week to week based on wind and roadworks. Expect East‑end classics (Lakeshore, Rouge, Pickering, Durham backroads) or a Don Valley loop. We announce the route at the start; bring a computer if you want your own breadcrumbs.</p>
+          <p>Routes vary week to week based on wind and roadworks. Expect East-end classics (Lakeshore, Rouge, Pickering, Durham back-roads) or a Don Valley loop. We announce the route at the start; bring a computer if you want your own breadcrumbs.</p>
           <p class="small">Want to help plan routes? Bring ideas or a GPX on the day.</p>
         </div>
         <div class="card">
           <p><strong>Start:</strong> Mortimer Ave &amp; Lismore Crescent</p>
-          <div style="aspect-ratio:16/9;background:#0e0e0e;border:1px solid #202020;border-radius:12px;overflow:hidden">
+          <div style="aspect-ratio:16/9; background:#0e0e0e; border:1px solid #202020; border-radius:12px; overflow:hidden;">
             <iframe title="Map: Mortimer & Lismore (OpenStreetMap)" src="https://www.openstreetmap.org/export/embed.html?bbox=-79.338%2C43.682%2C-79.326%2C43.690&layer=mapnik&marker=43.6863%2C-79.3323" style="border:0;width:100%;height:100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <p class="small">Arrive with lights on. We leave on time — <strong>06:30 sharp</strong>.</p>
@@ -179,25 +183,10 @@
           </div>
           <div class="card">
             <h3>We leave at 06:30.</h3>
-            <p>“Sharp” means sharp. Please arrive a few minutes early for a quick hello and roll‑out brief.</p>
+            <p>“Sharp” means sharp. Please arrive a few minutes early for a quick hello and roll-out brief.</p>
             <p class="small">This is an informal community ride without insurance or support. You ride at your own risk.</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Gallery -->
-    <section aria-label="Gallery">
-      <div class="wrap">
-        <div class="gallery" role="list" aria-label="Ride photos (royalty‑free)">
-          <img src="https://images.unsplash.com/photo-1444927714506-8492d94b4e3d?q=80&w=800&auto=format&fit=crop" alt="Sunrise over a quiet road" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1501706362039-c06b2d715385?q=80&w=800&auto=format&fit=crop" alt="Cyclist at dawn" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop" alt="Group ride on open road" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1448387473223-5c37445527e7?q=80&w=800&auto=format&fit=crop" alt="City sunrise skyline" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1520975930176-75a0a09678bf?q=80&w=800&auto=format&fit=crop" alt="Road through trees at golden hour" loading="lazy" />
-          <img src="https://images.unsplash.com/photo-1495197359483-d092478c170a?q=80&w=800&auto=format&fit=crop" alt="Coffee cups after a ride" loading="lazy" />
-        </div>
-        <p class="small" style="margin-top:10px">Photos via Unsplash (free to use under the Unsplash License). Want your photo here? Send us a link.</p>
       </div>
     </section>
 
@@ -209,11 +198,11 @@
         <div class="grid two">
           <div class="card">
             <h3>Is it really free?</h3>
-            <p>Yep. It’s just folks riding bikes. No fees, no sign‑ups.</p>
+            <p>Yep. It’s just folks riding bikes. No fees, no sign-ups.</p>
           </div>
           <div class="card">
             <h3>What if it rains?</h3>
-            <p>We’re fair‑weather by default. If the roads are unsafe, common sense prevails. Decide at the start.</p>
+            <p>We’re fair-weather by default. If the roads are unsafe, common sense prevails. Decide at the start.</p>
           </div>
           <div class="card">
             <h3>Can I bring friends?</h3>
@@ -242,7 +231,7 @@
         </div>
         <div>
           <img src="https://images.pexels.com/photos/161172/pexels-photo-161172.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Riders rolling at dawn" loading="lazy" />
-          <p class="small">Hero/inline imagery from Unsplash &amp; Pexels (royalty‑free).</p>
+          <p class="small">Hero/inline imagery from Unsplash & Pexels (royalty-free).</p>
         </div>
       </div>
     </section>
@@ -251,7 +240,7 @@
   <footer>
     <div class="wrap">
       <p><strong>East York Dawn Patrol</strong> — Sunday sunrise road rides · A ~27 km/h · B ~25 km/h · ~80 km · Mortimer &amp; Lismore · 06:30 sharp.</p>
-      <p class="small">Built with ❤️ for the local cycling community. Photos from Unsplash &amp; Pexels under their free‑to‑use licenses. No tracking, no cookies.</p>
+      <p class="small">Built with ❤️ for the local cycling community. Photo from Unsplash/Pexels under free-to-use license. No tracking, no cookies.</p>
     </div>
   </footer>
 
@@ -260,7 +249,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "East York Dawn Patrol — Sunday 6:30am Ride",
+    "name": "East York Dawn Patrol — Sunday 6:30 am Ride",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "eventStatus": "https://schema.org/EventScheduled",
     "startDate": "2025-10-19T06:30:00-04:00",
@@ -276,14 +265,15 @@
     },
     "description": "Free ~80 km sunrise road rides. Group A ~27 km/h, Group B ~25 km/h. Helmets & lights required. Leave at 06:30 sharp.",
     "image": [
-      "https://images.unsplash.com/photo-1446226844365-56f184f4bff4?q=80&w=1600&auto=format&fit=crop"
+      "BACKGROUND_IMAGE_URL"
     ],
     "organizer": {
       "@type": "Organization",
       "name": "East York Dawn Patrol",
-      "url": "https://"
+      "url": ""
     }
   }
   </script>
+
 </body>
 </html>
