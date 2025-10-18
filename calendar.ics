@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//East York Dawn Patrol//EN
+BEGIN:VEVENT
+UID:east-york-dawn-patrol-20251018T115219@eydp
+DTSTAMP:20251018T115219
+DTSTART;TZID=America/Toronto:20251019T063000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:East York Dawn Patrol — Sunday 6:30am
+LOCATION:Mortimer Ave & Lismore Crescent, East York, Toronto
+DESCRIPTION:~80 km sunrise ride. A ~27 km/h, B ~25 km/h. Helmet & lights required. Leave 06:30 sharp.
+END:VEVENT
+END:VCALENDAR
