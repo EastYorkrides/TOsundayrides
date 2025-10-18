@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="ChatGPT" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata><name>Loop 2 - Rouge Route</name></metadata>
+  <trk><name>Loop 2 - Rouge Route</name><trkseg>
+    <trkpt lat='43.6863' lon='-79.3323'><ele>100</ele></trkpt><trkpt lat='43.68' lon='-79.25'><ele>100</ele></trkpt><trkpt lat='43.75' lon='-79.0'><ele>100</ele></trkpt><trkpt lat='43.72' lon='-79.32'><ele>100</ele></trkpt><trkpt lat='43.6863' lon='-79.3323'><ele>100</ele></trkpt>
+  </trkseg></trk>
+</gpx>

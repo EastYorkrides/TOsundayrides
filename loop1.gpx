@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="ChatGPT" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata><name>Loop 1 - Pickering Route</name></metadata>
+  <trk><name>Loop 1 - Pickering Route</name><trkseg>
+    <trkpt lat='43.6863' lon='-79.3323'><ele>100</ele></trkpt><trkpt lat='43.7' lon='-79.2'><ele>100</ele></trkpt><trkpt lat='43.8' lon='-79.1'><ele>100</ele></trkpt><trkpt lat='43.76' lon='-79.35'><ele>100</ele></trkpt><trkpt lat='43.6863' lon='-79.3323'><ele>100</ele></trkpt>
+  </trkseg></trk>
+</gpx>
